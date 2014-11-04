@@ -179,23 +179,6 @@ describe("once", function() {
 });
 
 
-// create a function called wrapper
-// that is given a function and a wrapper function
-// return a new function that calls the wrapper function, gives it the block function
-// and yields to it from inside wrapper
-describe("the wrapper (silly block nightmares)", function() {
-  it("makes a function more polite", function() {
-    var hello = function() { return "David"; };
-    var newFunction = wrapper(hello, function(block) {
-      return "My name is " + block() + ".  It's nice to meet you.";
-    });
-    expect(newFunction()).toEqual("My name is David.  It's nice to meet you.");
-  });
-
-});
-
-
-
 
 
 
